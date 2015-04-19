@@ -18,7 +18,9 @@ SVGCurveLib./*some method here*/
 ```
 
 
-### `SVGCurveLib.pointOnLine(p0, p1, t)`
+### `pointOnLine`
+
+`SVGCurveLib.pointOnLine(p0, p1, t)`
 
  - Returns: object with format `{x: 0, y: 0}`
  - Parameters:
@@ -26,7 +28,9 @@ SVGCurveLib./*some method here*/
  	 - `p1`: object with format `{x: 0, y: 0}` - end point
  	 - `t`: number [0-1]
 
-### `SVGCurveLib.pointOnQuadraticBezierCurve(p0, p1, p2, t)`
+### `pointOnQuadraticBezierCurve`
+
+`SVGCurveLib.pointOnQuadraticBezierCurve(p0, p1, p2, t)`
 
  - Returns: object with format `{x: 0, y: 0}`
  - Parameters:
@@ -35,7 +39,9 @@ SVGCurveLib./*some method here*/
  	 - `p2`: object with format `{x: 0, y: 0}` - end point
  	 - `t`: number [0-1]
 
-### `SVGCurveLib.pointOnCubicBezierCurve(p0, p1, p2, p3, t)`
+### `pointOnCubicBezierCurve`
+
+`SVGCurveLib.pointOnCubicBezierCurve(p0, p1, p2, p3, t)`
 
  - Returns: object with format `{x: 0, y: 0}`
  - Parameters:
@@ -45,7 +51,9 @@ SVGCurveLib./*some method here*/
  	 - `p3`: object with format `{x: 0, y: 0}` - end point
  	 - `t`: number [0-1]
 
-### `SVGCurveLib.pointOnEllipticalArc(p0, rx, ry, xAxisRotation, largeArcFlag, sweepFlag, p1, t)`
+### `.pointOnEllipticalArc`
+
+`SVGCurveLib.pointOnEllipticalArc(p0, rx, ry, xAxisRotation, largeArcFlag, sweepFlag, p1, t)`
 
  - Returns: object with format `{x: 0, y: 0}` with some added props
  	 - Additional Object Props.:
@@ -66,7 +74,9 @@ SVGCurveLib./*some method here*/
  	 - `t`: number [0-1]
 
 
-### `SVGCurveLib.calculateQuadraticBezierTOfCriticalPoint(p0, p1, p2)`
+### `calculateQuadraticBezierTOfCriticalPoint`
+
+`SVGCurveLib.calculateQuadraticBezierTOfCriticalPoint(p0, p1, p2)`
 
 Returns the t-value for each axis where the curve can change from negative to positive slope, or vice versa
 
@@ -77,7 +87,9 @@ Returns the t-value for each axis where the curve can change from negative to po
  	 - `p2`: object with format `{x: 0, y: 0}` - end point
 
 
-### `SVGCurveLib.calculateCubicBezierTOfCriticalPoint(p0, p1, p2, p3)`
+### `calculateCubicBezierTOfCriticalPoint`
+
+`SVGCurveLib.calculateCubicBezierTOfCriticalPoint(p0, p1, p2, p3)`
 
 Returns the t-value for each axis where the curve can change from negative to positive slope, or vice versa
 
@@ -89,7 +101,9 @@ Returns the t-value for each axis where the curve can change from negative to po
  	 - `p3`: object with format `{x: 0, y: 0}` - end point
 
 
-### `SVGCurveLib.approximateArcLengthOfCurve(resolution, pointOnCurveFunc)`
+### `approximateArcLengthOfCurve`
+
+`SVGCurveLib.approximateArcLengthOfCurve(resolution, pointOnCurveFunc)`
 
  - Returns: object
  	 - Object Props.:
@@ -98,7 +112,9 @@ Returns the t-value for each axis where the curve can change from negative to po
  	 	 - `approximationLines`: array of arrays - List of polylines(always size 2 in this case but code wisely if using for debugging (start and end point))
 
 
-### `SVGCurveLib.generateLinearCurve(resolution, pointOnCurveFunc)`
+### `generateLinearCurve`
+
+`SVGCurveLib.generateLinearCurve(resolution, pointOnCurveFunc)`
 
 Returns a function that will linearly interpolate along the curve u: [0, 1]
 

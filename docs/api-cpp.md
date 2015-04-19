@@ -8,7 +8,9 @@ SVGCurveLib::/*some method here*/
 
 
 
-### `SVGCurveLib::PointGeneric<> SVGCurveLib::PointOnLine(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, float t)`
+### `PointOnLine`
+
+`SVGCurveLib::PointGeneric<> SVGCurveLib::PointOnLine(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, float t)`
 
  - Returns: `SVGCurveLib::PointGeneric<>`
  - Parameters:
@@ -16,7 +18,9 @@ SVGCurveLib::/*some method here*/
  	 - `p1`: `SVGCurveLib::PointGeneric<>` - end point
  	 - `t`: float [0-1]
 
-### `SVGCurveLib::PointGeneric<> PointOnQuadraticBezierCurve(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, SVGCurveLib::PointGeneric<> p2, float t)`
+### `PointOnQuadraticBezierCurve`
+
+`SVGCurveLib::PointGeneric<> SVGCurveLib::PointOnQuadraticBezierCurve(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, SVGCurveLib::PointGeneric<> p2, float t)`
 
  - Returns: SVGCurveLib::Point
  - Parameters:
@@ -25,7 +29,9 @@ SVGCurveLib::/*some method here*/
  	 - `p2`: `SVGCurveLib::PointGeneric<>` - end point
  	 - `t`: float [0-1]
 
-### `SVGCurveLib::PointGeneric<> PointOnCubicBezierCurve(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, SVGCurveLib::PointGeneric<> p2, SVGCurveLib::PointGeneric<> p3, float t)`
+### `PointOnCubicBezierCurve`
+
+`SVGCurveLib::PointGeneric<> SVGCurveLib::PointOnCubicBezierCurve(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, SVGCurveLib::PointGeneric<> p2, SVGCurveLib::PointGeneric<> p3, float t)`
 
  - Returns: SVGCurveLib::Point
  - Parameters:
@@ -35,7 +41,9 @@ SVGCurveLib::/*some method here*/
  	 - `p3`: `SVGCurveLib::PointGeneric<>` - end point
  	 - `t`: float [0-1]
 
-### `SVGCurveLib::PointWithEllipticalArcInfo PointOnEllipticalArc(SVGCurveLib::PointGeneric<> p0, double rx, double ry, double xAxisRotation, bool largeArcFlag, bool sweepFlag, SVGCurveLib::PointGeneric<> p1, float t)`
+### `PointOnEllipticalArc`
+
+`SVGCurveLib::PointWithEllipticalArcInfo SVGCurveLib::PointOnEllipticalArc(SVGCurveLib::PointGeneric<> p0, double rx, double ry, double xAxisRotation, bool largeArcFlag, bool sweepFlag, SVGCurveLib::PointGeneric<> p1, float t)`
 
  - Returns: `SVGCurveLib::PointWithEllipticalArcInfo` but can be implicitly converted/cast to `SVGCurveLib::PointGeneric<>`
  	 - `SVGCurveLib::PointWithEllipticalArcInfo` members:
@@ -57,7 +65,9 @@ SVGCurveLib::/*some method here*/
  	 - `t`: float [0-1]
 
 
-### `SVGCurveLib::PointGeneric<> CalculateQuadraticBezierTOfCriticalPoint(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, SVGCurveLib::PointGeneric<> p2)`
+### `CalculateQuadraticBezierTOfCriticalPoint`
+
+`SVGCurveLib::PointGeneric<> SVGCurveLib::CalculateQuadraticBezierTOfCriticalPoint(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, SVGCurveLib::PointGeneric<> p2)`
 
 Returns the t-value for each axis where the curve can change from negative to positive slope, or vice versa
 
@@ -68,7 +78,9 @@ Returns the t-value for each axis where the curve can change from negative to po
  	 - `p2`: `SVGCurveLib::PointGeneric<>` - end point
 
 
-### `std::array<SVGCurveLib::Point, 3> CalculateCubicBezierTOfCriticalPoint(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, SVGCurveLib::PointGeneric<> p2, SVGCurveLib::PointGeneric<> p3)`
+### `CalculateCubicBezierTOfCriticalPoint`
+
+`std::array<SVGCurveLib::Point, 3> SVGCurveLib::CalculateCubicBezierTOfCriticalPoint(SVGCurveLib::PointGeneric<> p0, SVGCurveLib::PointGeneric<> p1, SVGCurveLib::PointGeneric<> p2, SVGCurveLib::PointGeneric<> p3)`
 
 Returns the t-value for each axis where the curve can change from negative to positive slope, or vice versa
 
@@ -81,7 +93,9 @@ Returns the t-value for each axis where the curve can change from negative to po
 
 
 
-### `SVGCurveLib::ArcLengthInfo ApproximateArcLengthOfCurve(unsigned int resolution, SVGCurveLib::PointGeneric<> (*pointOnCurveFunc)(float))`
+### `ApproximateArcLengthOfCurve`
+
+`SVGCurveLib::ArcLengthInfo SVGCurveLib::ApproximateArcLengthOfCurve(unsigned int resolution, SVGCurveLib::PointGeneric<> (*pointOnCurveFunc)(float))`
 
 ```
 auto/*SVGCurveLib::ArcLengthInfo*/ result = SVGCurveLib::ApproximateArcLengthOfCurve(resolution, [&](float t) {
@@ -98,7 +112,9 @@ auto/*SVGCurveLib::ArcLengthInfo*/ result = SVGCurveLib::ApproximateArcLengthOfC
 
 
 
-### `SVGCurveLib::LinearCurve(unsigned int resolution, SVGCurveLib::PointGeneric<> (*pointOnCurveFunc)(float))`
+### `LinearCurve`
+
+`SVGCurveLib::LinearCurve(unsigned int resolution, SVGCurveLib::PointGeneric<> (*pointOnCurveFunc)(float))`
 
 Once initialized, use `myLinearCurve.PointOnLinearCurve(float u)` to sample the linear curve
 
