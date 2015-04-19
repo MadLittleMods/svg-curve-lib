@@ -12,8 +12,8 @@ The API is equivalent and we strive for the same syntax across the language impl
 
 # API
 
- - Javascript (JS)
- - C++
+ - [Javascript (JS)](/docs/api-js.md)
+ - [C++](docs/api-cpp.md)
 
 # Demos
 
