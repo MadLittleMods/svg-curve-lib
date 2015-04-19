@@ -17,9 +17,9 @@ The API is equivalent and we strive for the same syntax across the language impl
 
 # Demos
 
- - Interactive Bezier Curve Demo (Quadratic, Cubic)
- - Interactive Elliptical Arc Demo
- - Barebones Draw Curve Demo
+ - [Interactive Bezier Curve Demo (Quadratic, Cubic)](http://madlittlemods.github.io/svg-curve-lib/demos/js/interactive-bezier-curve-demo/)
+ - [Interactive Elliptical Arc Demo](http://madlittlemods.github.io/svg-curve-lib/demos/js/interactive-elliptical-arc-demo/)
+ - [Barebones Draw Curve Demo](http://madlittlemods.github.io/svg-curve-lib/demos/js/barebones-bezier-curve-demo/)
 
 
 # Testing
