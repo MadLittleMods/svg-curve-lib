@@ -1,0 +1,100 @@
+body {
+	font-family: Arial;
+}
+
+li {
+	padding: 4px 0;
+}
+
+
+img, canvas, svg {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.demo-area {
+	display: flex;
+}
+
+.demo-area-item {
+	flex: 1;
+	/* Fix from: https://bugzilla.mozilla.org/show_bug.cgi?id=1154758#c2 */
+	min-width: 0;
+}
+
+.demo-input-control-column
+{
+	flex: 0.4;
+
+	overflow: hidden;
+
+	white-space: nowrap;
+
+	transition: flex 0.1s linear;
+}
+.demo-input-control-column.is-collapsed {
+	flex: 0.01;
+	flex: 0.00001;
+}
+
+.demo-input-control-column-visibility-handle {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 50px;
+
+	background: rgba(0, 0, 0, 0.2);
+
+	cursor: pointer;
+}
+
+.demo-input-control-column-visibility-handle:before {
+	content: '<';
+
+	font-size: 50px;
+}
+.demo-input-control-column-visibility-handle.is-input-control-column-collapsed:before {
+	content: '>';
+}
+
+
+.demo-input-control-column-visibility-handle:after {
+	content: 'Text input controls';
+
+	position: absolute;
+  	top: 75px;
+	left: -34px;
+
+	font-size: 14px;
+	white-space: nowrap;
+
+	transform: rotateZ(-90deg);
+}
+
+	.demo-input-model-group
+	{
+		padding: 1em 0;
+		border-bottom: 1px solid #000000;
+	}
+	.demo-input-model-group:first-child {
+		padding-top: 0;
+	}
+	.demo-input-model-group:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+
+		.demo-input-number
+		{
+			width: 50px;
+		}
+
+.demo-canvas {
+	border: 1px solid #000000;
+}
+
+
+
