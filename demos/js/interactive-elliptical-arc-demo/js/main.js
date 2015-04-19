@@ -23,7 +23,7 @@ var ellipticalArcDemoModel = {
 		sweepFlag: false,
 		xAxisRotation: 0,
 
-		resolution: 50,
+		resolution: 15,
 		subdivision: 35
 	},
 
