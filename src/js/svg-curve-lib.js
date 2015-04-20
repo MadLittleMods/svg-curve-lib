@@ -1,3 +1,4 @@
+// SVG Curve Library
 // https://github.com/MadLittleMods/svg-curve-lib
 // v0.2.0
 //
