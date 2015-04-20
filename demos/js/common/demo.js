@@ -384,7 +384,7 @@ function generateTextInputsForModel(demo, element) {
 			var $field = $('<div><label for="' + rootSettingId + '">' + settingKey + ': </label></div>').appendTo($inputGroup);
 
 
-			function asdf(inputId, settingsPath, /*optional*/inputCb, /*optional*/updateCb) {
+			function createTextInputForSetting(inputId, settingsPath, /*optional*/inputCb, /*optional*/updateCb) {
 
 				var settingsValue = getObjectPropertybyString(demo.demoState.modelList[modelIndex].settings, settingsPath);
 
@@ -426,12 +426,12 @@ function generateTextInputsForModel(demo, element) {
 
 			// Add the input based on setting type to the field
 			if(typeof(rootSettingsValue) === 'object' && typeof(rootSettingsValue.x) === 'number' && typeof(rootSettingsValue.y) === 'number') {
-				asdf(rootSettingId, settingsPath + '.x');
-				asdf(rootSettingId + '-y', settingsPath + '.y');
+				createTextInputForSetting(rootSettingId, settingsPath + '.x');
+				createTextInputForSetting(rootSettingId + '-y', settingsPath + '.y');
 			}
 			// Otherwise we can probably handle it (number or boolean)
 			else {
-				asdf(rootSettingId, settingsPath);
+				createTextInputForSetting(rootSettingId, settingsPath);
 			}
 		});
 	});
