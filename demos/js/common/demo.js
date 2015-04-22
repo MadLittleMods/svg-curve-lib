@@ -560,6 +560,11 @@ function createDraggablePoint(offset, startingPos, size, el, cb) {
 		[].slice.call(e.originalEvent.changedTouches).forEach(function(touchListItem) {
 			mouseMoveHandler(touchListItem);
 		});
+
+		// Stop the scrolling on a mobile device
+		// when we are dragging a point on the canvas
+		if(isDragging) {
+		}
 	};
 	$(el).on('mousemove', mouseMoveHandler);
 	$(el).on('touchmove', touchMovehandler);
