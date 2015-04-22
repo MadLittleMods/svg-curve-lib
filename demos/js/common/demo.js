@@ -564,6 +564,7 @@ function createDraggablePoint(offset, startingPos, size, el, cb) {
 		// Stop the scrolling on a mobile device
 		// when we are dragging a point on the canvas
 		if(isDragging) {
+			e.preventDefault();
 		}
 	};
 	$(el).on('mousemove', mouseMoveHandler);
