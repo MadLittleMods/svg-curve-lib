@@ -520,7 +520,13 @@ function createDraggablePoint(offset, startingPos, size, el, cb) {
 			}
 		}
 	};
+	var touchStartHandler = function(e) {
+		[].slice.call(e.originalEvent.changedTouches).forEach(function(touchListItem) {
+			mouseDownHandler(touchListItem);
+		});
+	};
 	$(el).on('mousedown', mouseDownHandler);
+	$(el).on('touchstart', touchStartHandler);
 
 	var mouseMoveHandler = function(e) {
 		e = normalizeEvent(e);
@@ -550,7 +556,13 @@ function createDraggablePoint(offset, startingPos, size, el, cb) {
 			lastMousePosWhileDragging = correctedMousePos;
 		}
 	};
+	var touchMovehandler = function(e) {
+		[].slice.call(e.originalEvent.changedTouches).forEach(function(touchListItem) {
+			mouseMoveHandler(touchListItem);
+		});
+	};
 	$(el).on('mousemove', mouseMoveHandler);
+	$(el).on('touchmove', touchMovehandler);
 
 	var mouseUpHandler = function(e) {
 		e = normalizeEvent(e);
@@ -577,7 +589,14 @@ function createDraggablePoint(offset, startingPos, size, el, cb) {
 			});
 		}
 	};
+	var touchEndHandler = function(e) {
+		[].slice.call(e.originalEvent.changedTouches).forEach(function(touchListItem) {
+			mouseUpHandler(touchListItem);
+		});
+	};
 	$(document).on('mouseup', mouseUpHandler);
+	$(document).on('touchend', touchEndHandler);
+
 
 	function isWithinBounds(pos) {
 		if(pos.x > currentPos.x-(size/2) && pos.x < currentPos.x+(size/2) && pos.y > currentPos.y-(size/2) && pos.y < currentPos.y+(size/2)) {
@@ -591,8 +610,13 @@ function createDraggablePoint(offset, startingPos, size, el, cb) {
 	// Return a function that cleans up the bindings if they want to
 	return function() {    
 		$(el).off('mousedown', mouseDownHandler);
+		$(el).on('touchstart', touchStartHandler);
+		
 		$(el).off('mousemove', mouseMoveHandler);
+		$(el).on('touchmove', touchMovehandler);
+
 		$(document).off('mouseup', mouseUpHandler);
+		$(document).on('touchend', touchEndHandler);
 	};
 }
 
