@@ -1,8 +1,8 @@
 {
   "name": "svg-curve-lib",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "Bezier Curve and Elliptical Arc implementations - SVG Path commands",
-  "main": "index.js",
+  "main": "src/js/svg-curve-lib.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha ./test/js/test.js",
     "testSetupArduino": "node ./node_modules/gulp/bin/gulp.js"
@@ -11,12 +11,15 @@
     "type": "git",
     "url": "https://github.com/MadLittleMods/svg-curve-lib.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Eric Eastwood <contact@ericeastwood.com>",
   "bugs": {
     "url": "https://github.com/MadLittleMods/svg-curve-lib/issues"
   },
   "homepage": "https://github.com/MadLittleMods/svg-curve-lib",
+  "keywords": [
+    "svg",
+    "paths"
+  ],
   "devDependencies": {
     "bluebird": "^2.9.16",
     "chai": "^2.1.2",
