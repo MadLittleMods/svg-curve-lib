@@ -51,7 +51,7 @@ SVGCurveLib./*some method here*/
  	 - `p3`: object with format `{x: 0, y: 0}` - end point
  	 - `t`: number [0-1]
 
-### `.pointOnEllipticalArc`
+### `pointOnEllipticalArc`
 
 `SVGCurveLib.pointOnEllipticalArc(p0, rx, ry, xAxisRotation, largeArcFlag, sweepFlag, p1, t)`
 
