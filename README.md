@@ -1,5 +1,7 @@
 # SVG Curve Library
 
+[![Join the chat at https://gitter.im/MadLittleMods/svg-curve-lib](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MadLittleMods/svg-curve-lib?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Bezier Curve and Elliptical Arc implementations in multiple languages. SVG path commands.
 
 The API is equivalent and we strive for the same syntax across the language implementations.
